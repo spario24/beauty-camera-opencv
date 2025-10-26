@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Camera2.Test</string>
+    <string name="app_record">record</string>
+
+
+    <!-- makeup cam -->
+
+    <string name="beauty_camera">宠萌相机</string>
+    <string name="swap">切换相机</string>
+    <string name="cat_ear">猫耳朵</string>
+    <string name="rabbit_ear">兔耳朵</string>
+    <string name="filter_camera">滤镜相机</string>
+    <string name="filter_photo">滤镜照片</string>
+
+    <string name="filter_none">Original</string>
+    <string name="filter_hudson">Hudson</string>
+    <string name="filter_inkwell">Inkwell</string>
+    <string name="filter_pixar">Pixar</string>
+    <string name="filter_sierra">Sierra</string>
+    <string name="filter_whitecat">WhiteCat</string>
+    <string name="filter_romance">Romance</string>
+    <string name="filter_antique">Antique</string>
+    <string name="filter_beauty">Beauty</string>
+    <string name="filter_calm">Calm</string>
+    <string name="filter_cool">Cool</string>
+    <string name="filter_fairytale">Fairytale</string>
+    <string name="filter_healthy">Healthy</string>
+    <string name="filter_tender">Tender</string>
+    <string name="filter_warm">Warm</string>
+    <string name="filter_sunrise">Sunrise</string>
+    <string name="filter_sunset">Sunset</string>
+    <string name="filter_skinwhiten">SkinWhiten</string>
+    <string name="filter_crayon">Crayon</string>
+    <string name="filter_sketch">Sketch</string>
+    <string name="filter_breath_circle">BreathCircle</string>
+
+    <string name="edit_filter">Filter</string>
+    <string name="edit_edit">Edit</string>
+    <string name="edit_adds">Adds</string>
+    <string name="edit_frame">Frame</string>
+    <string name="edit_beauty">Beauty</string>
+
+    <string name="edit_contrast">Contrast</string>
+    <string name="edit_exposure">Exposure</string>
+    <string name="edit_vibrance">Vibrance</string>
+    <string name="edit_saturation">Saturation</string>
+    <string name="edit_sharpness">Sharpness</string>
+    <string name="edit_brightness">Bright</string>
+    <string name="edit_hue">Hue</string>
+
+
+</resources>
