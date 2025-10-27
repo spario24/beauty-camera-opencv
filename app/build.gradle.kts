@@ -60,7 +60,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-//    implementation("androidx.startup:startup-runtime:1.2.1")
+    implementation("androidx.startup:startup-runtime:1.2.0")
 
     implementation(project(":camerarecorder"))
     implementation(project(":BeautyFilter"))

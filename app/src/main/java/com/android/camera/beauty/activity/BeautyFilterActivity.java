@@ -48,12 +48,12 @@ public class BeautyFilterActivity extends AppCompatActivity implements View.OnCl
     private ObjectAnimator mObjectAnimator;
 
     private final static int MODE_PICTURE = 1;
-    private final static int MODE_VIDEO   = 2;
+    private final static int MODE_VIDEO = 2;
     private int mBeautyMode = MODE_PICTURE;
 
     private final String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
-    private final static BeautyFilterType[] types = new BeautyFilterType[] {
+    private final static BeautyFilterType[] types = new BeautyFilterType[]{
             BeautyFilterType.NONE,
             BeautyFilterType.BREATH_CIRCLE,
             BeautyFilterType.ANTIQUE,
@@ -122,42 +122,35 @@ public class BeautyFilterActivity extends AppCompatActivity implements View.OnCl
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_camera_beauty:
-                new AlertDialog.Builder(this)
-                        .setSingleChoiceItems(new String[] { "close", "1", "2", "3", "4", "5"}, BeautyParams.beautyLevel,
-                                (dialog, which) -> {
-                                    mBeautyEngine.setBeautyLevel(which);
-                                    dialog.dismiss();
-                                })
-                        .setNegativeButton("cancel", null)
-                        .show();
-                break;
-            case R.id.btn_camera_closefilter:
-                hideFilter();
-                break;
-            case R.id.btn_camera_filter:
-                showFilter();
-                break;
-            case R.id.btn_camera_mode:
-                switchMode();
-                break;
-            case R.id.btn_camera_shutter:
-                if (PermissionChecker.checkSelfPermission(this, permissions[0]) != PermissionChecker.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(this, permissions, view.getId());
+        int id = view.getId();
+
+        if (id == R.id.btn_camera_beauty) {
+            new AlertDialog.Builder(this)
+                    .setSingleChoiceItems(new String[]{"close", "1", "2", "3", "4", "5"}, BeautyParams.beautyLevel,
+                            (dialog, which) -> {
+                                mBeautyEngine.setBeautyLevel(which);
+                                dialog.dismiss();
+                            })
+                    .setNegativeButton("cancel", null)
+                    .show();
+        } else if (id == R.id.btn_camera_closefilter) {
+            hideFilter();
+        } else if (id == R.id.btn_camera_filter) {
+            showFilter();
+        } else if (id == R.id.btn_camera_mode) {
+            switchMode();
+        } else if (id == R.id.btn_camera_shutter) {
+            if (PermissionChecker.checkSelfPermission(this, permissions[0]) != PermissionChecker.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, permissions, view.getId());
+            } else {
+                if (mBeautyMode == MODE_PICTURE) {
+                    takePicture();
                 } else {
-                    if(mBeautyMode == MODE_PICTURE) {
-                        takePicture();
-                    } else {
-                        takeVideo();
-                    }
+                    takeVideo();
                 }
-                break;
-            case R.id.btn_camera_switch:
-                mCameraView.switchCamera();
-                break;
-            default:
-                break;
+            }
+        } else if (id == R.id.btn_camera_switch) {
+            mCameraView.switchCamera();
         }
     }
 

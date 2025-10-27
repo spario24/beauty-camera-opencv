@@ -1,10 +1,12 @@
 package com.android.camera2
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.android.camera.activity.MainActivity
 import com.android.camera2.fragment.Camera2M1
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +20,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        addFragment()
+//        addFragment()
+        gotoCameraBeauty()
     }
 
     fun addFragment(){
@@ -28,4 +31,9 @@ class MainActivity : AppCompatActivity() {
             .add(R.id.main, frag)
             .commit()
     }
+
+    fun gotoCameraBeauty(){
+        startActivity(Intent(this, MainActivity::class.java))
+    }
+
 }

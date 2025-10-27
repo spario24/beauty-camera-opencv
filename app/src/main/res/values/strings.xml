@@ -5,12 +5,12 @@
 
     <!-- makeup cam -->
 
-    <string name="beauty_camera">宠萌相机</string>
-    <string name="swap">切换相机</string>
-    <string name="cat_ear">猫耳朵</string>
-    <string name="rabbit_ear">兔耳朵</string>
-    <string name="filter_camera">滤镜相机</string>
-    <string name="filter_photo">滤镜照片</string>
+    <string name="beauty_camera">Beauty Camera</string>
+    <string name="swap">Switch Camera</string>
+    <string name="cat_ear">Cat Ears</string>
+    <string name="rabbit_ear">Rabbit Ears</string>
+    <string name="filter_camera">Filter Camera</string>
+    <string name="filter_photo">Filter Photo</string>
 
     <string name="filter_none">Original</string>
     <string name="filter_hudson">Hudson</string>
